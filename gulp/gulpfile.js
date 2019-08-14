@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
     pug = require('gulp-pug'),
+    concat = require('gulp-concat'),
     browserSync = require('browser-sync').create();
 
 
@@ -17,13 +18,18 @@ gulp.task('browser-sync', function() {
 
 
 gulp.task('style', function () {
-   return gulp.src('./src/sass/**/*.sass')
+   return gulp.src([
+    './src/sass/**/reset.sass',
+    './src/sass/**/style.sass',
+    './src/sass/**/*.sass'
+    ])
    .pipe(sourcemaps.init())
    .pipe(sass())
    .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 versions'],
             cascade: false
         }))
+   .pipe(concat('main.css'))
    .pipe(sourcemaps.write())
    .pipe(gulp.dest('./public/css'))
 });
