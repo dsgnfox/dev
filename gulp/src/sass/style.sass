@@ -2,13 +2,67 @@ $font-stack:    Helvetica, sans-serif
 $primary-color: #fff
 
 body 
-	font: 55px $font-stack;
+	font: 18px $font-stack
 	color: $primary-color
+h1
+	font: 2rem $font-stack
+	color: #000000
+	margin-bottom: 25px
+.container
+	max-width: 1200px
+	width: 100%
+	margin: 0 auto
+.row
+	display: flex
+.header
+	&__menu
+		display: flex
+		align-items: center
+		justify-content: space-between
+		width: 400px
+	&__logo
+		display: flex
+		align-items: center
+		text-align: center
+		background: green
+		padding: 5px 15px
+		font-size: 2rem
+		color: black
+		margin-right: 25px
+	li
+		text-decoration: none
+		list-style: default
+		color: #000
 
-h1 
-	font-size: 2em
-	display: block
-
-p 
-	line-height: 2rem
-	color: blue
+		&:first-child
+			color: #c1c1c1
+.slider
+	background: gray
+	height: 400px
+	display: flex
+	justify-content: center
+	align-items: center
+	h1
+		color: $primary-color
+		text-align: center
+		font-size: 3rem
+		width: 100%
+section
+	padding: 40px 0
+.items
+	display: flex
+	justify-content: space-between
+.item
+	display: flex
+	flex-direction: column
+	justify-content: center
+	&__icon
+		width: 20px
+		height: 20px
+		background: #000
+		border-radius: 50%
+		margin-bottom: 10px
+	&__txt
+		font-size: 14px
+		color: #000000
+	

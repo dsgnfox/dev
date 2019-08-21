@@ -2,10 +2,53 @@ doctype html
 html
 	include ../views/head.pug
 	body
-		h1 rrrrrrrrrrr
-		p ddd
-		section.main
-			h2 123123!
+		header.header
+			.container
+				.row
+					.header__logo LOGO
+					ul.header__menu
+						li 
+							a(href="#") link
+						li
+							a(href="#") link 1
+							ul
+								li
+									a(href="#") sublink
+								li
+									a(href="#") sublink
+								li
+									a(href="#") sublink
+								li
+									a(href="#") sublink
+								li
+									a(href="#") sublink
+						li 
+							a(href="#") link
+						li 
+							a(href="#") link
+						li 
+							a(href="#") link
+		main
+			.slider
+				.container 
+					.row
+						h1 Hello!
+			section
+				.container
+						h1 Title
+						.items
+							.item
+								.item__icon
+								.item__txt 123
+							.item
+								.item__icon
+								.item__txt 123
+							.item
+								.item__icon
+								.item__txt
+							.item
+								.item__icon
+								.item__txt 123
 
 	include ../views/footer.pug
 	
