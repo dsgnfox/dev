@@ -5,18 +5,26 @@ html
 		header.header
 			.container
 				.row
-					.header__logo git-test
-					ul.header__menu
-						li 
-							a(href="#") link
-						li
-							a(href="#") link 1
-						li 
-							a(href="#") link
-						li 
-							a(href="#") link
-						li 
-							a(href="#") link
+					.header__logo
+						img(src='img/knyaz.png' srcset='img/knyaz@2x.png 2x')
+					.header__content
+						h2 Ваша новая загородная жизнь и отдых!
+						ul.header__menu
+							li 
+								a(href="#") link
+							li
+								a(href="#") link 1
+							li 
+								a(href="#") link
+							li 
+								a(href="#") link
+							li 
+								a(href="#") link
+					.header__tel
+						.header__tel-icon
+							span.icon
+								use(xlink:href='img/icon--telephone.svg')
+								// как использовать свг непонятно
 		main
 			.slider
 				.container 
@@ -39,5 +47,5 @@ html
 								.item__icon
 								.item__txt 123
 
-	include ../views/footer.pug
+		include ../views/footer.pug
 	

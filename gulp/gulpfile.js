@@ -24,7 +24,7 @@ gulp.task('style', function () {
     './src/sass/**/*.sass'
     ])
    .pipe(sourcemaps.init())
-   .pipe(sass())
+   .pipe(sass({outputStyle: 'expanded'}))
    .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 versions'],
             cascade: false
