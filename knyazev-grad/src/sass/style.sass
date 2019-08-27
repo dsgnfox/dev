@@ -1,0 +1,170 @@
+@import __var.sass
+@import __reset.sass
+@import __grid.sass
+
+
+body 
+	font: 14px $font-main
+	color: $color-darkGray
+h1
+	font: 44px $font-ui
+	color: $color-darkBlue
+	margin-bottom: 25px
+section
+	padding: 80px 0
+a
+	transition: all .25s ease-in-out
+	text-decoration: none
+	&:hover
+		opacity: .6
+p
+	line-height: 28px
+	margin-bottom: 25px
+.container
+	max-width: 1360px
+	width: 100%
+	margin: 0 auto
+	padding: 0 30px
+.row
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -30px
+
+.header
+	position: relative
+	z-index: 100
+	padding: 25px 0 15px
+	background: rgba($color-darkGreen, .85)
+	color: #fff
+	&__wrap
+		position: relative
+		width: 100%
+		display: flex
+		align-items: center
+	&__logo
+		margin-right: 100px
+	&__main
+	
+	&__main-title
+			position: relative
+			font-family: $font-ui
+			font-size: 18px
+			color: $color-Gold
+			margin-bottom: 10px
+			&::after
+				content: ''
+				display: block
+				width: 43%
+				height: 1px
+				background: rgba($color-Gold, .4)
+			h2
+				margin-bottom: 10px
+	&__menu
+		display: flex
+	&__link
+		color: #fff
+		text-decoration: none
+		font-family: $font-ui
+		font-size: 15px
+		margin-right: 25px
+	&__tel
+		position: absolute
+		right: 0
+		font-family: $font-second
+	&__tel-wrap
+		position: relative
+		top: 18px
+		display: flex
+		align-items: flex-end
+	&__tel-number
+		position: relative
+		bottom: 7px
+		color: #fff
+		font-size: 16px
+		font-weight: 600
+	&__tel-icon
+		display: block
+		width: 19px
+		height: 18px
+		padding: 20px
+		margin-right: 10px
+		border-radius: 50%
+		border: 1px solid #fff
+		background-image: url('../img/icon--tel.svg')
+		background-repeat: no-repeat
+		background-position: center
+	&__tel-txt
+		position: absolute
+		top: 5px
+		right: 0
+		width: 70%
+		text-align: right
+		padding-bottom: 5px
+		border-bottom: 1px solid rgba($color-Gold, .4)
+		font-size: 10px
+
+
+.hero-img
+	position: relative
+	width: 100%
+	height: 514px
+	background-image: url('../img/header-bg.jpg')
+	background-position: center
+	background-size: cover
+	margin-top: -128px
+
+
+.section
+	&__title
+		display: flex
+		align-items: center
+		& span
+			display: inline-block
+			margin-right: 30px
+			white-space: nowrap
+		&::after
+			content: ''
+			position: relative
+			right: 0
+			top: 0
+			display: inline-block
+			width: 100%
+			height: 8px
+			border-top: 1px solid $color-Gold
+			border-bottom: 1px solid $color-Gold
+	
+.section.about
+	background-color: $color-lightXlGray
+	background-image: url('../img/bg_pattern_ser.png')
+	background-position: center right
+	background-repeat: no-repeat
+.about-numbers
+	margin-top: 50px
+	&__wrap
+		display: flex
+		align-items: flex-end
+		font-family: $font-ui
+	&__title
+		font-size: 108px
+		line-height: 90px
+		color: $color-Gold
+		margin-right: 10px
+	&__txt
+		color: $color-lightGray
+		font-size: 16px
+.about-items
+	display: flex
+	flex-wrap: wrap
+.about-item
+	width: 33%
+	margin-bottom: 60px
+	&__img
+		margin-bottom: 5px
+	&__txt
+		font: 16px $font-ui
+		color: $color-darkBlue
+	
+
+
+@import media.sass
+
