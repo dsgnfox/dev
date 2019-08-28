@@ -10,11 +10,16 @@ h1
 	font: 44px $font-ui
 	color: $color-darkBlue
 	margin-bottom: 25px
+h2 
+	font: 26px $font-ui
+	color: $color-darkBlue
+	margin-bottom: 15px
 section
 	padding: 80px 0
 a
 	transition: all .25s ease-in-out
 	text-decoration: none
+	color: inherit
 	&:hover
 		opacity: .6
 p
@@ -30,7 +35,16 @@ p
 	display: flex
 	flex-wrap: wrap
 	margin: 0 -30px
-
+.btn
+	display: block
+	max-width: 300px
+	font-family: $font-ui
+	font-weight: bold
+	color: $color-darkBlue
+	padding: 15px 40px
+	text-align: center
+	border: 1px solid $color-darkBlue
+	border-radius: 40px
 .header
 	position: relative
 	z-index: 100
@@ -48,9 +62,6 @@ p
 	
 	&__main-title
 			position: relative
-			font-family: $font-ui
-			font-size: 18px
-			color: $color-Gold
 			margin-bottom: 10px
 			&::after
 				content: ''
@@ -59,6 +70,9 @@ p
 				height: 1px
 				background: rgba($color-Gold, .4)
 			h2
+				font-family: $font-ui
+				font-size: 18px
+				color: $color-Gold
 				margin-bottom: 10px
 	&__menu
 		display: flex
@@ -119,27 +133,44 @@ p
 	&__title
 		display: flex
 		align-items: center
+		&--right
+			&::before
+				content: ''
+				position: relative
+				right: 0
+				top: 4px
+				display: inline-block
+				width: 100%
+				height: 8px
+				border-top: 1px solid $color-Gold
+				border-bottom: 1px solid $color-Gold
+			span
+				margin-left: 30px
+		&--left
+			&::after
+				content: ''
+				position: relative
+				right: 0
+				top: 4px
+				display: inline-block
+				width: 100%
+				height: 8px
+				border-top: 1px solid $color-Gold
+				border-bottom: 1px solid $color-Gold
+			span
+				margin-right: 30px
 		& span
 			display: inline-block
-			margin-right: 30px
 			white-space: nowrap
-		&::after
-			content: ''
-			position: relative
-			right: 0
-			top: 0
-			display: inline-block
-			width: 100%
-			height: 8px
-			border-top: 1px solid $color-Gold
-			border-bottom: 1px solid $color-Gold
+
 	
 .section.about
 	background-color: $color-lightXlGray
 	background-image: url('../img/bg_pattern_ser.png')
 	background-position: center right
 	background-repeat: no-repeat
-	margin-bottom: 10px
+.section.house-territory
+	padding-bottom: 0
 .about-numbers
 	margin-top: 50px
 	&__wrap
@@ -165,16 +196,139 @@ p
 	&__txt
 		font: 16px $font-ui
 		color: $color-darkBlue
-.section-right-pic
+.quote
+	position: relative
+	z-index: 10
+	background: #fff
+	padding: 30px
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, .16)
+.house-territory
 	&__img
 		position: absolute
-		top: -130px
+		top: -110px
 		right: 30px
-		z-index: -1
-.quote
-	background: #fff
-	padding: 15px 20px
-	box-shadow: 0px 3px 6px #000000
+	.quote
+		width: 70% 
+		margin: 0 0 30px -30px
+.house-territory-items
+	display: flex
+	justify-content: space-around
+.house-territory-item
+	&__img
+		margin-bottom: 10px
+	&__txt
+		font-family: $font-ui
+		color: $color-darkBlue
+		font-size: 17px
+		text-align: center
+.documentation-item
+	display: flex
+	margin-top: 15px
+	&__img
+		margin-right: 10px
+	&__title
+		font-family: $font-ui
+		color: $color-darkBlue
+		font-size: 17px
+.contact
+	position: relative
+	background: #c1c1c1
+	&__map
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+		width: 100%
+		height: 500px
+	&__aside
+		position: relative
+		z-index: 10
+		padding: 40px 40px 40px 30px
+		background: #ffffff;
+		&::before
+			content: ''
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: #ffffff;
+.contact-info
+	margin-bottom: 30px
+	&__row
+		display: flex
+		align-items: baseline
+	&__img
+		position: relative
+		top: 1px
+		margin-right: 10px
+	&__txt
+		p
+			margin-bottom: 0
+.contact-route
+	&__btn
+		margin: 20px 0 50px
+
+.contact-weather
+	&__wrap
+		display: flex
+		align-items: center
+	&__value
+		font-family: $font-ui
+		color: $color-darkBlue
+		font-size: 85px
+		margin-right: 15px
+	&__icon
+		max-width: 100px
+		text-align: center
+	&__smalltxt
+		font-family: $font-ui
+		color: rgba($color-darkBlue, .5)
+		font-size: 12px
+
+
+
+#map
+	display: none
+
+
+.tabs
+	&-btns
+		display: flex
+		text-decoration: none
+		padding: 0 0 20px 30px
+		margin-bottom: 20px
+		border-bottom: 1px solid $color-lightXGray
+		&__btn
+			font-family: $font-ui
+			font-size: 17px
+			color: $color-lightXGray
+			cursor: pointer
+			&:first-child
+				margin-right: 40px
+			&::before
+				content: ''
+				position: relative
+				top: -1px
+				display: inline-block
+				width: 8px
+				height: 8px
+				margin-right: 10px
+				background-color: $color-lightXGray
+				border-radius: 50%
+			&.active
+				color: $color-darkBlue
+				text-decoration: underline
+				transition: all .25s ease-in-out
+				&::before
+					background-color: $color-darkBlue		
+	&-content
+		padding: 0 0 20px 30px
+		&__tab
+			display: none
+			&.active
+				display: block
 
 
 
