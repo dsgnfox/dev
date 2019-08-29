@@ -2,7 +2,6 @@
 @import __reset.sass
 @import __grid.sass
 
-
 body 
 	font: 14px $font-main
 	color: $color-darkGray
@@ -232,7 +231,6 @@ p
 		font-size: 17px
 .contact
 	position: relative
-	background: #c1c1c1
 	&__map
 		position: absolute
 		top: 0
@@ -245,6 +243,7 @@ p
 		z-index: 10
 		padding: 40px 40px 40px 30px
 		background: #ffffff;
+		box-shadow: 0px 1px 5px rgba(0, 0, 0, .2);
 		&::before
 			content: ''
 			display: block;
@@ -254,6 +253,18 @@ p
 			width: 100%;
 			height: 100%;
 			background: #ffffff;
+			box-shadow: 0px 1px 5px rgba(0, 0, 0, .2);
+		&::after
+			content: ''
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 10px;
+			height: 100%;
+			background: #ffffff;
+	&__desc
+		margin-top: 450px
 .contact-info
 	margin-bottom: 30px
 	&__row
@@ -289,18 +300,17 @@ p
 
 
 
-#map
-	display: none
+
 
 
 .tabs
-	&-btns
+	&__caption
 		display: flex
 		text-decoration: none
 		padding: 0 0 20px 30px
 		margin-bottom: 20px
 		border-bottom: 1px solid $color-lightXGray
-		&__btn
+		& li
 			font-family: $font-ui
 			font-size: 17px
 			color: $color-lightXGray
@@ -323,14 +333,151 @@ p
 				transition: all .25s ease-in-out
 				&::before
 					background-color: $color-darkBlue		
-	&-content
+	&__content
+		display: none
 		padding: 0 0 20px 30px
-		&__tab
-			display: none
-			&.active
-				display: block
+		&.active
+			display: block
+
+.footer
+	padding: 80px 0
+	color: #ffffff
+	font-family: $font-second
+	background: linear-gradient(to bottom, rgba(1,82,50,1) 0%, rgba(2,8,0,1) 100%)
+	&__wrap
+		display: flex
+		justify-content: space-between
+	&__left, &__right
+		width: 30%
+	&__right
+		text-align: right
+	&__logo
+		width: 40%
+		text-align: center
+	&__title
+		font-size: 15px
+		color: $color-Gold
+		margin-bottom: 15px
+	&__txt
+		font-size: 13px
+		color: $color-Gold
+	&__tel
+		font-size: 22px
+		font-weight: 600
+		margin-bottom: 10px
+	&__email
+		font-size: 15px
+		margin-bottom: 20px
+	& .copyright
+		margin-top: 40px
+
+.copyright
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	font-family: $font-main
+	font-weight: lighter
+	text-align: left
+	opacity: .7
+	&__img
+		width: 32px
+		height: 32px
+		margin-right: 10px
+	&__title
+		color: #F92472
+		font-size: 18px
+		margin-bottom: 0px
+		& span
+			color: #F8F8DC
+			font-size: 14px
+	&__txt
+		font-size: 11px
+		color: #74705D
+
+.modal-mmenu
+	position: fixed
+	top: 0
+	z-index: 10000
+	height: 100%
+	width: 100%
+	overflow: 
+	transition: all .3s ease-in-out
+	&__txt
+		position: fixed
+		top: 0
+		bottom: 0
+		z-index: 100
+		width: 250px
+		padding: 30px 0px
+		overflow-y: scroll
+		background-color: $color-darkGray
+	&__bg
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 20;
+		background-color: rgba(0,0,0,.3);
+	&__tel
+		width: 100%
+		padding: 15px 15px 15px 30px
+		font-size: 21px
+		font-weight: bold
+		color: #ffffff
+	& ul
+		margin-bottom: 40px
+		& li
+			display: flex
+		& a
+			width: 100%
+			margin: 0px 15px
+			padding: 15px
+			font-size: 18px
+			color: #ffffff
+			border-bottom: 1px solid #2c3531
+			opacity: .5
+			transition: all .2s ease-in-out
+			&:hover
+				opacity: 1
+				
+.mmenu
+	position: relative
+	display: flex
+	width: 40px
+	cursor: pointer
+	span
+		position: absolute
+		display: block
+		width: 100%
+		height: 3px
+		background-color: #ffffff
+		transition: all .2s ease-in-out
+		&::before, &::after
+			content: ''
+			display: block
+			position: absolute
+			width: 100%
+			height: 3px
+			background-color: #ffffff
+			transition: all .2s ease-in-out
+		&::before
+			top: -10px	
+		&::after
+			top: 10px
+	&--active
+		span
+			transform: rotate(45deg)
+			&::before
+				top: 0
+				transform: rotate(0)
+			&::after
+				top: 0
+				transform: rotate(90deg)
+
+.visible-lg
+	display: none
 
 
 
-@import media.sass
-
+@import __media.sass

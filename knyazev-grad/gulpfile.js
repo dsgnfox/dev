@@ -31,19 +31,6 @@ gulp.task('style', function () {
    .pipe(gulp.dest('./public/css'))
 });
 
-gulp.task('bs', function () {
-   return gulp.src([
-    './src/sass/bootstap/**/*.scss'
-    ])
-   .pipe(sass({outputStyle: 'expanded'}))
-   .pipe(autoprefixer({
-            overrideBrowserslist: ['last 10 versions'],
-            cascade: false
-        }))
-   .pipe(concat('bootstrap.css'))
-   .pipe(gulp.dest('./public/css'))
-});
-
 
 gulp.task('watch', function () {
     gulp.watch('./src/sass/**/*.sass', gulp.series('style'));
