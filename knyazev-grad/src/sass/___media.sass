@@ -1,19 +1,151 @@
 @media (max-width: $bp-xl)
-    
+    h2
+        font-size: 22px
     .header
         &__logo
             margin-right: 50px
-    .section.about
-        background-image: none
+        &__tel
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            &-txt
+                position: relative
+                top: 0
+    .section
+        padding: 40px 0
+        &.about
+            background-image: none
     .about-numbers
         margin-bottom: 50px
+        &__title
+            margin-bottom: 10px
         &__wrap
             flex-direction: column
             align-items: flex-start
     .about-item
         margin-bottom: 50px
+    .house-territory
+        & .quote
+            width: 100%
+            margin: 0 0 30px
+        &__img
+            position: relative
+            top: 0
+            right: 0
+            margin-bottom: 30px
+            & img
+                width: 100%
+    .contact
+        &__desc
+            margin-top: 490px
+    .hidden-xl
+        display: none
     
 @media (max-width: $bp-lg)
-	.visible-lg
-        display: block
-    
+    .section
+        &.contact
+            padding-bottom: 0
+    .header
+        padding: 15px 0
+        &__wrap
+            justify-content: space-between
+        &__logo
+            height: 50px
+            & img
+                max-width: 100%
+                max-height: 100%
+        &.scrolled
+            position: fixed
+            top: 0
+            width: 100%
+            z-index: 1000
+    .contact
+        &__map
+            position: relative
+        &__aside
+            padding-top: 0
+            box-shadow: none
+        &__desc
+            margin-top: 0
+    .footer
+        &__wrap
+            flex-direction: column
+            align-items: center
+        &__left
+            order: 2
+            width: 100%
+            text-align: center
+        &__right
+            order: 3
+            width: 100%
+            text-align: center
+        &__logo
+            order: 1
+            width: 100%
+            margin-bottom: 25px
+    .copyright
+        justify-content: center
+    .visible-lg
+        display: block      
+    .hidden-lg
+        display: none
+    br
+        display: none
+@media (max-width: $bp-md)
+    .container
+        padding: 0 15px
+    .row
+        margin: 0
+    .section
+        &__title
+            & span
+                white-space: pre-wrap
+                margin: 0
+            &::after
+                display: none
+            &::before
+                display: none
+    .about-item
+        width: 50%
+    .about-numbers
+        display: flex
+        flex-wrap: wrap
+        & .col-md-6
+            &:first-child
+                margin-bottom: 20px
+    .house-territory-items
+        flex-wrap: wrap
+    .house-territory-item
+        width: 100%
+        margin-bottom: 30px
+        &__txt
+            text-align: left
+    .contact
+        &__aside
+            padding: 0 20px 40px
+    .tabs
+        &__caption
+            padding-left: 0
+        &__content
+            padding-left: 0
+@media (max-width: $bp-sm)
+    h1
+        font-size: 32px
+    .about-items
+        flex-direction: column
+        .about-item
+            width: 100%
+            text-align: center
+    .about-numbers
+        &__wrap
+            align-items: center
+    .house-territory-item
+            text-align: center
+            &__txt
+                text-align: center
+    .tabs
+        &__caption
+            flex-direction: column
+            & li
+                &:first-child
+                    margin: 0 0 20px 0

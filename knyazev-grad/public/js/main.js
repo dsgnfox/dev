@@ -33,9 +33,19 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
 //моб меню
 $('.mmenu').click( function() {
     $('.modal-mmenu').toggle();
-    $(this).addClass('mmenu--active');
+    $(this).toggleClass('mmenu--active');
 });
 $('.modal-mmenu__bg').click( function() {
     $('.modal-mmenu').hide();
-    $('.mmenu').removeClass('mmenu--active');
+    $('.mmenu').toggleClass('mmenu--active');
+});
+
+
+//хэдер на моб // через цсс начиная с $bp-lg добавляю фикс в классу scrolled
+$(window).scroll(function(){
+    $('header').toggleClass('scrolled', $(this).scrollTop() > 10);
+});
+
+// анимация
+AOS.init({
 });
